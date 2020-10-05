@@ -56,7 +56,7 @@
                             <constraint firstItem="yxw-hU-cVv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hgD-dW-bPe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RKb-QU-BJb"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="RKb-QU-BJb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,37 +70,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXW-Cv-jaG">
-                                <rect key="frame" x="0.0" y="650" width="414" height="86"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4I6-qr-aDv">
-                                        <rect key="frame" x="8" y="8.0000000000000018" width="398" height="21.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AE3-Hz-Zbq">
+                                <rect key="frame" x="0.0" y="643" width="414" height="93"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TAK-ug-u38">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4I6-qr-aDv">
+                                            <rect key="frame" x="8" y="0.0" width="398" height="21.666666666666668"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" systemColor="systemBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="4I6-qr-aDv" firstAttribute="leading" secondItem="TAK-ug-u38" secondAttribute="leadingMargin" id="9k6-vE-9dW"/>
+                                        <constraint firstItem="4I6-qr-aDv" firstAttribute="top" secondItem="TAK-ug-u38" secondAttribute="top" id="ACe-lt-J6o"/>
+                                        <constraint firstItem="4I6-qr-aDv" firstAttribute="trailing" secondItem="TAK-ug-u38" secondAttribute="trailingMargin" id="H4T-2m-MN3"/>
+                                    </constraints>
+                                </view>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="86" id="9A7-F3-zfl"/>
-                                    <constraint firstAttribute="trailing" secondItem="4I6-qr-aDv" secondAttribute="trailing" constant="8" id="Lc9-aU-e12"/>
-                                    <constraint firstItem="4I6-qr-aDv" firstAttribute="leading" secondItem="tXW-Cv-jaG" secondAttribute="leading" constant="8" id="tbG-fc-D43"/>
-                                    <constraint firstItem="4I6-qr-aDv" firstAttribute="top" secondItem="tXW-Cv-jaG" secondAttribute="top" constant="8" id="z44-WJ-qaK"/>
+                                    <constraint firstAttribute="height" constant="93" id="CDI-ue-Njf"/>
                                 </constraints>
-                            </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="baw-62-yPQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tXW-Cv-jaG" firstAttribute="leading" secondItem="baw-62-yPQ" secondAttribute="leading" id="0Ee-tC-b2w"/>
-                            <constraint firstItem="tXW-Cv-jaG" firstAttribute="bottom" secondItem="baw-62-yPQ" secondAttribute="bottom" id="FNk-vJ-7VE"/>
-                            <constraint firstItem="tXW-Cv-jaG" firstAttribute="trailing" secondItem="baw-62-yPQ" secondAttribute="trailing" id="tbJ-L0-lhy"/>
+                            <constraint firstItem="AE3-Hz-Zbq" firstAttribute="bottom" secondItem="baw-62-yPQ" secondAttribute="bottom" id="A0X-tX-2fb"/>
+                            <constraint firstItem="AE3-Hz-Zbq" firstAttribute="trailing" secondItem="baw-62-yPQ" secondAttribute="trailing" id="WYV-yp-oUa"/>
+                            <constraint firstItem="AE3-Hz-Zbq" firstAttribute="leading" secondItem="baw-62-yPQ" secondAttribute="leading" id="xiO-7L-H8F"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4C6-FZ-kJK"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="4C6-FZ-kJK"/>
                     <connections>
                         <outlet property="messageLabel" destination="4I6-qr-aDv" id="Qiy-9s-K3H"/>
-                        <outlet property="messageView" destination="tXW-Cv-jaG" id="QhN-pe-EOK"/>
+                        <outlet property="messageView" destination="AE3-Hz-Zbq" id="Bdl-If-8Cr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueF-WU-wjW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -115,6 +121,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="myW-qY-uEf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="linkColor"/>
+                        <color key="barTintColor" red="0.44020844990000002" green="0.39234585620000001" blue="0.78884438450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -128,6 +139,9 @@
     </scenes>
     <resources>
         <image name="barcode" width="512" height="512"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
